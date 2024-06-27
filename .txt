@@ -51,13 +51,49 @@ xmm0    .
 ymm0    .
 zmm0    .
 
-st      .
-st(0)   .
-st(7)   .
-
 xmm0s   .
 xmm0d   .
 xmm0b   .
 xmm0w   .
 xmm0i   .
 xmm0l   .
+
+edx:eax u*= ebx   .
+eax += ebx + cf   .
+eax u< ebx : l    .
+
+xmm1b |s+=| xmm2    .
+xmm1b |us-=| xmm2   .
+xmm0s |=a| [f]      .
+xmm0s |=u| [f]      .
+
+xmm0s uo<=> xmm1s   .
+
+xmm0s v|=| shuffle(xmm1s, 1110b)   .
+
+xmm0s = sqrt(xmm1s)       .
+xmm2s = float(ecx)        .
+ecx = int(round(xmm2s))   .
+xmm0d = convert(xmm1s)    .
+
+eax = zx(byte[byte_num])   .
+rax = sx(byte[byte_num])   .
+
+xmm1s .= min(xmm2)   .
+xmm1s .= max(xmm2)   .
+
+ymm1b v|=| unpacklo(ymm2, ymm0)   .
+ymm1w v|=| hadd(ymm2, ymm3)       .
+
+fst.load(fst2)              .
+fst.load_pi()               .
+fst.load_log2(10)           .
+fst.load_lg(2)              .
+fst.load_ln(2)              .
+fst.pop()                   .
+fst.top++                   .
+fst.load_int(8bytes[rsp])   .
+fpu.sw = fst0 <=> 0         .
+fst0 = abs(fst0)            .
+fst0 = sin(fst0)            .
+fpu.cw = [mem]              .
