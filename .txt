@@ -1,0 +1,63 @@
+ax      .
+bx      .
+cx      .
+dx      .
+si      .
+di      .
+sp      .
+bp      .
+
+al      .
+bl      .
+cl      .
+dl      .
+ah      .
+bh      .
+ch      .
+dh      .
+
+sil     .
+dil     .
+spl     .
+bpl     .
+
+eax     .
+ebx     .
+ecx     .
+edx     .
+esi     .
+edi     .
+esp     .
+ebp     .
+
+rax     .
+rbx     .
+rcx     .
+rdx     .
+rsi     .
+rdi     .
+rsp     .
+rbp     .
+
+r8b     .
+r8w     .
+r8d     .
+r8      .
+
+eip     .
+rip     .
+
+xmm0    .
+ymm0    .
+zmm0    .
+
+st      .
+st(0)   .
+st(7)   .
+
+xmm0s   .
+xmm0d   .
+xmm0b   .
+xmm0w   .
+xmm0i   .
+xmm0l   .
