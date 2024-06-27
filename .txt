@@ -85,15 +85,16 @@ xmm1s .= max(xmm2)   .
 ymm1b v|=| unpacklo(ymm2, ymm0)   .
 ymm1w v|=| hadd(ymm2, ymm3)       .
 
-fst.load(fst2)              .
-fst.load_pi()               .
-fst.load_log2(10)           .
-fst.load_lg(2)              .
-fst.load_ln(2)              .
-fst.pop()                   .
-fst.top++                   .
-fst.load_int(8bytes[rsp])   .
-fpu.sw = fst0 <=> 0         .
-fst0 = abs(fst0)            .
-fst0 = sin(fst0)            .
-fpu.cw = [mem]              .
+fst.load(fst2)                .
+fst.load_pi()                 .
+fst.load_log2(10)             .
+fst.load_lg(2)                .
+fst.load_ln(2)                .
+fst.pop()                     .
+fst.top++                     .
+fst.load_int(8bytes[rsp])     .
+fpu.sw = fst0 <=> 0           .
+fst0 = abs(fst0)              .
+fst0 = sin(fst0)              .
+fpu.cw = [mem]                .
+fst0 -= read_int(4bytes[i])   .
