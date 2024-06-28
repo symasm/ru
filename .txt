@@ -58,6 +58,12 @@ xmm0w   .
 xmm0i   .
 xmm0l   .
 
+push rax   .
+pop rax    .
+ret        .
+
+al = 1 if !p else 0   .
+
 edx:eax u*= ebx   .
 eax += ebx + cf   .
 eax u< ebx : l    .
