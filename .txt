@@ -61,6 +61,7 @@ xmm0l   .
 push rax   .
 pop rax    .
 ret        .
+nop        .
 
 al = 1 if !p else 0   .
 
@@ -90,6 +91,9 @@ xmm1s .= max(xmm2)   .
 
 ymm1b v|=| unpacklo(ymm2, ymm0)   .
 ymm1w v|=| hadd(ymm2, ymm3)       .
+
+lock cmpxchg [rdx], rbx   .
+lock xadd    [rsi], rax   .
 
 fst.load(fst2)                .
 fst.load_pi()                 .
