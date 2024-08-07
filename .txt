@@ -95,6 +95,9 @@ ymm1w v|=| hadd(ymm2, ymm3)       .
 lock cmpxchg [rdx], rbx   .
 lock xadd    [rsi], rax   .
 
+syscall   .
+sysret    .
+
 fst.load(fst2)                .
 fst.load_pi()                 .
 fst.load_log2(10)             .
