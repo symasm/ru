@@ -63,6 +63,8 @@ pop rax    .
 ret        .
 nop        .
 
+mov rcx, offset fmt   .
+
 al = 1 if !p else 0   .
 
 edx:eax u*= ebx   .
