@@ -71,6 +71,11 @@ edx:eax u*= ebx   .
 eax += ebx + cf   .
 eax u< ebx : l    .
 
+zf : label   .
+sf : label   .
+pf : label   .
+of : label   .
+
 xmm1b |s+=| xmm2    .
 xmm1b |us-=| xmm2   .
 xmm0s |=a| [f]      .
